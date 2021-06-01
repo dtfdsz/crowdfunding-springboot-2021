@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: SCW-PROJECT
+  datasource:
+    username: 
+    password: 
+    url: 
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 
+    port: 6379
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: SCW-PROJECT
+    prefer-ip-address: true
+server:
+  port: 8000
+feign:
+  hystrix:
+    enabled: true

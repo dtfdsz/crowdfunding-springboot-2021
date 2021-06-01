@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: SCW-WEBUI
+    
+  session: 
+    store-type: redis
+    
+  redis:
+    host: 
+    port: 6379
+    #password: 123456
+    
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false #开发的时候禁用缓存
+
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: SCW-WEBUI
+    prefer-ip-address: true
+    
+server:
+  port: 9000
+  
+feign:
+  hystrix:
+    enabled: true
+
